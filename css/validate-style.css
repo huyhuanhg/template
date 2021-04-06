@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.form-wrap {
+    width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, .5);
+    padding: 20px;
+}
+
+#form-template {
+    margin: 0 80px;
+}
+
+#form-template > h3 {
+    text-align: center;
+    font-size: 200%;
+    color: #651313;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#form-template > .form-group:nth-child(7), #form-template > .form-group:nth-child(8),
+#form-template > .form-group:nth-child(9), #form-template > .form-group:nth-child(10) {
+    flex-direction: row;
+    align-items: center;
+}
+#form-template > .form-group:nth-child(7), #form-template > .form-group:nth-child(8),
+#form-template > .form-group:nth-child(9){
+    padding-bottom: 16px;
+}
+#form-template > .form-group:nth-child(7) .msg, #form-template > .form-group:nth-child(8) .msg,
+#form-template > .form-group:nth-child(9) .msg{
+    bottom: 4px;
+}
+#form-template > .form-group:nth-child(7) .icon i, #form-template > .form-group:nth-child(8) .icon i,
+#form-template > .form-group:nth-child(9) .icon i,#form-template > .form-group:nth-child(10) .icon i{
+    display: none;
+}
+#form-template > .form-group:nth-child(10) {
+    justify-content: center;
+}
+/*#form-template > .form-group:nth-child(7).error .custom-file-upload{*/
+/*    background-color: rgba(255, 200, 200, 0.3);*/
+/*    color: red;*/
+/*    border: 1px solid red;*/
+/*}*/
+#form-template > .form-group:nth-child(10) .msg{
+    display: none;
+}
+
+
+/*!* Customize the label (the container) *!*/
+/*.container {*/
+/*    display: block;*/
+/*    position: relative;*/
+/*    padding-left: 35px;*/
+/*    margin-bottom: 12px;*/
+/*    cursor: pointer;*/
+/*    font-size: 22px;*/
+/*    -webkit-user-select: none;*/
+/*    -moz-user-select: none;*/
+/*    -ms-user-select: none;*/
+/*    user-select: none;*/
+/*}*/
+
+/*!* Hide the browser's default checkbox *!*/
+/*.container input {*/
+/*    position: absolute;*/
+/*    opacity: 0;*/
+/*    cursor: pointer;*/
+/*    height: 0;*/
+/*    width: 0;*/
+/*}*/
+
+/*!* Create a custom checkbox *!*/
+/*.checkmark {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 25px;*/
+/*    width: 25px;*/
+/*    background-color: #eee;*/
+/*}*/
+
+/*!* On mouse-over, add a grey background color *!*/
+/*.container:hover input ~ .checkmark {*/
+/*    background-color: #ccc;*/
+/*}*/
+
+/*!* When the checkbox is checked, add a blue background *!*/
+/*.container input:checked ~ .checkmark {*/
+/*    background-color: #2196F3;*/
+/*}*/
+
+/*!* Create the checkmark/indicator (hidden when not checked) *!*/
+/*.checkmark:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    display: none;*/
+/*}*/
+
+/*!* Show the checkmark when checked *!*/
+/*.container input:checked ~ .checkmark:after {*/
+/*    display: block;*/
+/*}*/
+
+/*!* Style the checkmark/indicator *!*/
+/*.container .checkmark:after {*/
+/*    left: 9px;*/
+/*    top: 5px;*/
+/*    width: 5px;*/
+/*    height: 10px;*/
+/*    border: solid white;*/
+/*    border-width: 0 3px 3px 0;*/
+/*    -webkit-transform: rotate(45deg);*/
+/*    -ms-transform: rotate(45deg);*/
+/*    transform: rotate(45deg);*/
+/*}*/
+
+
+
+
+
+
+#form-template > .form-group:nth-child(10).error label[for=check]{
+    color: red;
+}
+.form-group .icon i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 120%;
+    transform: translate(-50%, -30%);
+}
+
+.form-group.error .icon i {
+    color: #ff0000;
+}
+.form-group.error input, .form-group.error select{
+    border: 1px solid red;
+    background-color: rgba(255, 200, 200, 0.3);
+}
+.form-group.success .icon i {
+    color: green;
+}
+.form-group.success input, .form-group.success select {
+    border: 1px solid #008000;
+    background-color: rgba(175, 255, 175, 0.3) !important;
+}
+
+.form-group label.error {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%);
+}
+
+.form-group.error .error {
+    color: red;
+}
+
+.form-label {
+    font-size: 120%;
+    color: #1a265c;
+}
+
+.text-box {
+    margin: 5px 0 15px;
+    padding: 15px 30px;
+    font-size: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #1a265c;
+    transition: .3s ease-in-out;
+}
+
+.text-box:hover, .text-box:focus {
+    border-color: green;
+}
+
+.file-box {
+    padding: 10px 0 10px 10px;
+    font-size: 100%;
+    color: #065cc6;
+}
+
+.radio-group {
+    margin-left: 30px;
+}
+
+.radio-group > label {
+    color: #065cc6;
+}
+
+.radio-box {
+    margin-right: 10px;
+}
+
+.select-box {
+    padding: 5px 10px;
+    font-size: 130%;
+    color: #065cc6;
+    margin-left: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #1a265c;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.select-box:hover, .select-box:focus {
+    border-color: green;
+}
+
+label[for=check] {
+    margin-left: 10px;
+    font-size: 90%;
+    color: #3a65fd;
+    cursor: pointer;
+}
+
+/*input[type=file] {*/
+/*    border: none;*/
+/*    width: fit-content;*/
+/*    display: none;*/
+/*}*/
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    display: inline-block;
+    font-weight: 900;
+    border-radius: 5px;
+    background-color: #7dadff;
+    cursor: pointer;
+    color: white;
+    transition: .4s ease-in-out;
+}
+.custom-file-upload:hover{
+    color: #d2d2d2;
+    background-color: #4193fc;
+}
+.custom-file-upload>span{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.custom-file-upload > i {
+    border-right: 1px solid white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.btn {
+    width: 40%;
+    margin: 20px 30%;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 120%;
+    color: #1a265c;
+    border: 1px solid #1a265c;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #1a265c;
+}
