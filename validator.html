@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vilidator</title>
+    <script src="https://kit.fontawesome.com/efc0cf8ca8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/validate-style.css">
+    <script src="./js/Validate/Validator.js"></script>
+</head>
+<body>
+<div class="form-wrap">
+    <!--FORM-->
+    <form id="form-template">
+        <h3 class="heading">Form template Validate</h3>
+        <fieldset class="form-group">
+            <label for="fullname" class="form-label">Họ và Tên</label>
+            <input id="fullname" class="text-box" name="fullname" type="text" placeholder="VD: Huy Huấn"/>
+            <!--            Không được phép bỏ trống-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="birthday" class="form-label">Năm sinh</label>
+            <input id="birthday" class="text-box" name="birthday" type="text" placeholder="VD: 1995"/>
+            <!--            Không được phép bỏ trống-->
+            <!--            Phải có định dạng là kiểu số dương có 4 chữ số-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" class="text-box" name="email" type="text" placeholder="VD: huan@gmail.com"/>
+            <!--            Không được phép bỏ trống-->
+            <!--            Phải có định dạng là kiểu email-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" class="text-box" name="password" type="password" placeholder="Nhập mật khẩu"/>
+            <!--            Không được phép bỏ trống-->
+            <!--            Tối thiệu 6 kí tự, tối đa 20 kí tự-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="password-confirm" class="form-label">Nhập lại mật khẩu</label>
+            <input id="password-confirm" class="text-box" name="password-confirm" type="password"
+                   placeholder="Nhập lại mật khẩu"/>
+            <!--            Phải trùng khớp với #password-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="avatar" class="form-label">Ảnh đại diện: </label>
+<!--            <label class="custom-file-upload">-->
+                <input id="avatar" class="file-box" name="avatar" type="file"/>
+<!--                <i class="fas fa-image"></i><span>Thêm ảnh</span>-->
+<!--            </label>-->
+            <!--            Không được phép bỏ trống-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="form-label">Giới tính:</label>
+            <div class="radio-group">
+                <input id="male" class="radio-box" name="gender" value="male" type="radio"/>
+                <label for="male" class="form-label">Nam</label>
+            </div>
+            <div class="radio-group">
+                <input id="female" class="radio-box" name="gender" value="female" type="radio"/>
+                <label for="female" class="form-label">Nữ</label>
+            </div>
+            <div class="radio-group">
+                <input id="other" class="radio-box" name="gender" value="other" type="radio"/>
+                <label for="other" class="form-label">Khác</label>
+            </div>
+            <!--            Không được phép bỏ trống-->
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="form-label">Tình trạng hôn nhân: </label>
+            <select id="marriage" class="select-box" name="marriage">
+                <option value="" selected disabled hidden> ---Tình trạng hôn nhân---</option>
+                <option value="married"> Đã kết hôn</option>
+                <option value="alone"> Độc thân</option>
+            </select>
+            <!--            Không được phép bỏ trống-->
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="checkbox-group">
+                <label class="container">
+                    <input id="check" class="check-box" name="check" value="check" type="checkbox"/>
+                    <span class="checkmark"></span>
+                </label>
+                <label for="check" class="form-label">Bạn có đồng ý với điều khoản của chúng tôi?</label>
+            </div>
+            <!--            Không được phép bỏ trống-->
+        </fieldset>
+        <fieldset class="form-group">
+            <input name="sbm" class="btn" type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <script src="./js/validate-form-template.js"></script>
+</div>
+</body>
+</html>
